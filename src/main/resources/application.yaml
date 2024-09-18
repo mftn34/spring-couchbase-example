@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.default_batch_fetch_size: 1000
+      hibernate.default_schema: public
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
+    database: POSTGRESQL
+    database-platform: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5433/test_db?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: postgres
+    password: postgres
+
+couchbase:
+  properties:
+    username: Administrator
+    password: password
+    connection-string: couchbase://127.0.0.1
+    bucket-name: test-bucket
+    scope-name: test-scope
+    cacheable-collection: cache-collection
